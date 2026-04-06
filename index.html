@@ -153,6 +153,7 @@
   }
   .badge-row {
     display: flex;
+    flex-wrap: wrap;
     gap: 12px;
     justify-content: center;
     margin-top: 14px;
@@ -209,8 +210,8 @@
   .card-stage {
     perspective: 1200px;
     cursor: pointer;
-    width: 500px;
-    height: 500px;
+    width: min(500px, 90vw);
+    height: min(500px, 90vw);
     margin: 0 auto;
   }
   .card-inner {
@@ -642,6 +643,32 @@
     font-style: italic;
     font-size: 0.78rem;
     color: var(--parch-d);
+  }
+
+  /* MEDIA QUERIES FOR MOBILE */
+  @media (max-width: 600px) {
+    .nav {
+      margin-bottom: 2rem;
+    }
+    .card-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .b-special, .b-ur, .b-sr {
+      padding: 4px 10px;
+      font-size: 0.7rem;
+    }
+    .art-emoji {
+      font-size: 50px;
+    }
+    .mini-art {
+      height: 120px;
+    }
+    .title-skull {
+      font-size: 36px;
+    }
+    .back-skull {
+      font-size: 40px;
+    }
   }
 </style>
 </head>
